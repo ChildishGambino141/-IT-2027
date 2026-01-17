@@ -129,3 +129,23 @@ for i in range(len(a)-2):
 print(count,sumi)
 '''ответ: 16 1548'''
 '''--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------'''
+
+
+
+'''КРЫЛОВ 17 задание, 1 вариант'''
+s=open("17var01.txt").readlines()
+for p in range(len(s)):
+    s[p]=int(s[p])
+maxi=-123123213123
+mini=12312321312
+MAXI=-123123123123
+count=0
+for i in range(len(s)):
+    if 10<=abs(s[i])<=99:
+        mini=min(s[i],mini)
+        maxi=max(s[i],maxi)
+for i in range(len(s)-2):
+    if ((10<=abs(s[i])<=99 and 10<=abs(s[i+1])<=99) or (10<=abs(s[i])<=99 and 10<=abs(s[i+2])<=99) or (10<=abs(s[i+2])<=99 and 10<=abs(s[i+1])<=99)or (10<=abs(s[i])<=99 and 10<=abs(s[i+1])<=99 and 10<=abs(s[i+2])<=99)) and s[i]+s[i+1]+s[i+2]>mini+maxi:
+        count+=1
+        MAXI=max(MAXI,s[i]+s[i+1]+s[i+2])
+print(count,MAXI)
