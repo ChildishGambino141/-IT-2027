@@ -91,3 +91,17 @@ for N in range(10000):
     if R>50:
         mini=min(mini,N)
 print(mini)
+''' КРЫЛОВ номер 5, 1 вариант'''
+max=0
+for N in range(10000):
+    R=bin(N)[2:]
+    if N%3==0:
+        R=R+R[-3:]
+    else:
+        OST=(N%3+1)*3
+        OST=bin(OST)[2:]
+        R=R+OST
+    R=int(R,2)
+    if R>416:
+        max=max(max,R)
+print(max)
