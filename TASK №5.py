@@ -96,7 +96,7 @@ print(mini)
 
 
 ''' КРЫЛОВ номер 5, 1 вариант'''
-max=0
+maxo=0
 for N in range(10000):
     R=bin(N)[2:]
     if N%3==0:
@@ -106,6 +106,6 @@ for N in range(10000):
         OST=bin(OST)[2:]
         R=R+OST
     R=int(R,2)
-    if R>416:
-        max=max(max,R)
-print(max)
+    if R<416:
+        maxo=max(maxo,R)
+print(maxo)
