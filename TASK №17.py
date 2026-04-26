@@ -191,3 +191,20 @@ for i in range(len(a)-2):
 print(count,ma2)
 '''ответ: 581 78246'''
 '''--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------'''
+
+
+
+a=open("13.txt").readlines()
+for p in range(len(a)):
+    a[p]=int(a[p])
+m=13123123213123
+for N in range(len(a)):
+    if abs(a[N])%15!=0:
+        m=min(m,a[N])
+sum=0
+count=0
+for i in range(len(a)-1):
+    if abs(a[i])%m==0 and abs(a[i+1])%m==0:
+        count+=1
+        sum=max(sum,a[i]+a[i+1])
+print(count,sum)
