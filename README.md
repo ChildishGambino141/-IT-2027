@@ -513,3 +513,6 @@ for i in range(1, n):
     for j in range(1, m):
         w[i][j] = t[i][j] * (w[i][j - 1] + w[i - 1][j])
 print(w[-1][-1])
+
+import sys
+sys.setrecursionlimit(10 ** 9)
