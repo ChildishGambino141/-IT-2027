@@ -516,3 +516,20 @@ print(w[-1][-1])
 
 import sys
 sys.setrecursionlimit(10 ** 9)
+
+
+задание номер 1
+>>>from itertools import *
+>>>
+>>>s="".split()  #сколько совпадений между строкой и столбоцом
+>>>v="".split()  #название всех дорог
+>>>print(*range(1,8))
+>>>for p in permutations("ABCDEFG"):
+>>>    if all(str(p.index(b)+1) in s[p.index(a)] for a,b  in v):
+>>>        print(*p)
+
+задание номер 2
+>>>from fnmatch import *
+>>>for i in range (0, 10**9, 9111):
+>>>    if fnmatch(str(i),'4?28*8*3'):
+>>>        print(i)
