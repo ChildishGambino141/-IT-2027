@@ -521,7 +521,7 @@ sys.setrecursionlimit(10 ** 9)
 задание номер 1
 >>>from itertools import *
 >>>
->>>s="".split()  #сколько совпадений между строкой и столбоцом
+>>>s="".split()  #сколько совпадений между строкой и столбоцом(номер столбца)
 >>>v="".split()  #название всех дорог
 >>>print(*range(1,8))
 >>>for p in permutations("ABCDEFG"):
