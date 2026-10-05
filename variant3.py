@@ -48,7 +48,4 @@ for i1 in range(1,13):
 print(k)
 # ответ 8
 #11 - 110
-#13
-from ipaddress import *
-net=ip_network('216.130.232.30/255.255.255.0',0)
-print(net[0])
+#13-24
