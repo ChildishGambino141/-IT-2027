@@ -1,0 +1,9 @@
+#ДЛЯ 2 КУЧ
+def f(a,b,m):
+    if a+b<=47 :return m%2==0#условие для проигрыша
+    if m ==0:return 0#условие для проигрыша
+    g=[f(a-2,b,m-1),f(a//3,b,m-1),f(a,b-2,m-1),f(a,b//3,m-1)]
+    return any(g) if (m-1)%2==0 else all(g) #после 19 с any меняем на all
+print("19",[s for s in range(32,100) if f(16,s,2)])
+print("20",[s for s in range(32,10000) if not f(16,s,1) and f(16,s,3)])
+print("21",[s for s in range(32,10000) if not f(16,s,2) and f(16,s,4)])
